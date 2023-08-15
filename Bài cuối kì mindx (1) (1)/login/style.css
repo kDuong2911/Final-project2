@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+
+nav{
+    display: flex;
+    background: black;
+    height: 7vh;
+}
+nav div{
+    display: grid;
+    place-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+nav #login{
+    margin-left: 30%;
+}
+nav div a{
+    text-decoration: none;
+    color: white;
+}
+div nav div a{
+    font-weight: 700;
+}
+/* Header page */
+#header-wallpaper{
+    background-image: url(../img/49971636072_83b016c412.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+#header-wallpaper::after{
+    z-index: -1;
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    content: '';
+    opacity: .5;
+}
+h1 {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 3em;
+    position: absolute;
+    top: 35%;
+    width: 500px;
+    left: -500px; 
+    animation-name: slideInFromLeftH1;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideInFromLeftH1 {
+    0% {
+        left: -500px; 
+    }
+    100% {
+        left: 5%; 
+    }
+}
+@keyframes slideInFromLeft {
+    0% { width: 0;}
+    100% { width: 30rem; }
+}
+div hr{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    color: white;
+    animation-name: slideInFromLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+.signup-form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center align form content */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the form */
+}
+
+h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%; /* Set width to 100% to take the available space */
+    padding: 10px;
+    margin: 5px 0; /* Add vertical margin to create spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+/* Nav styling */
+nav{
+    display: flex;
+    background: black;
+    height: 7vh;
+}
+nav div{
+    display: grid;
+    place-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+nav #login{
+    margin-left: 30%;
+}
+nav div a{
+    text-decoration: none;
+    color: white;
+}
+div nav div a{
+    font-weight: 700;
+}
+/* Header page */
+#header-wallpaper{
+    background-image: url(../img/gettyimages-888491800.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+#header-wallpaper::after{
+    z-index: -1;
+    background-color: black;
+    position: absolute;
+    inset: 0;
+    content: '';
+    opacity: .5;
+}
+h1 {
+    color: white;
+    font-family: 'Lora', serif;
+    font-size: 3em;
+    position: absolute;
+    top: 35%;
+    width: 500px;
+    left: -500px; 
+    animation-name: slideInFromLeftH1;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideInFromLeftH1 {
+    0% {
+        left: -500px; 
+    }
+    100% {
+        left: 5%; 
+    }
+}
+@keyframes slideInFromLeft {
+    0% { width: 0;}
+    100% { width: 30rem; }
+}
+div hr{
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    color: white;
+    animation-name: slideInFromLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+/* Event timeline */
+#eventtimeline-page{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+#eventtimeline-page div:first-child{
+    display: grid;
+    place-items: center;
+
+}
+#eventtimeline-page > div > img{
+    max-width: 40vw;
+    max-height: 50vh ;
+}
+#eventtimeline-content #page-header{
+    color: black;
+}
+#eventtimeline-content{
+    display: block;
+    background: hsl(0, 0%, 95%);
+    width: 50vw;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+#eventtimeline-content h2{
+    position: relative;
+    color: hsl(200, 100%, 60%);
+}
+/* Selling books */
+#englishbooks-box h2{
+    position: absolute;
+}
+#englishbooks-box {
+    display: flex;
+    justify-content: space-around;
+}
+ 
+#englishbooks-box div img {
+    position: relative;
+    height: 30ch;
+}
+.english-books {
+    text-align: center;
+    padding: 30px;
+}
+
+.english-books h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#englishbooks-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.book {
+    transition: transform 0.3s ease-in-out;
+    padding: 5%;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+.book:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background: hsl(0, 0%, 80%);
+    padding: 20px 0; /* Add padding to create space around content */
+    text-align: center; /* Center-align footer content */
+    font-size: 14px;
+    color: hsl(0, 0%, 40%);
+}
+
+/* Footer links */
+footer a {
+    color: hsl(0, 0%, 40%);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: hsl(0, 0%, 20%);
+}
+
+/* Copyright text */
+.footer-copyright {
+    margin-top: 10px; /* Add some space above the copyright text */
+}
+
+/* Social media icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: hsl(0, 0%, 40%);
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: hsl(0, 0%, 20%);
+}
